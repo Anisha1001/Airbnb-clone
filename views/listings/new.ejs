@@ -1,0 +1,62 @@
+<% layout("/layouts/boilerplate") %> 
+<div class="row">
+  <div class="col-8 offset-2">
+  <h3>Create a New Listing</h3>
+  <form action="/listings" method="POST" novalidate class=" needs-validation" enctype="multipart/form-data">
+
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input required type="text" class="form-control" id="title" name="listing[title]" placeholder="Add Title">
+      <div class="valid-feedback">Title looks good😊</div>
+      <div class="invalid-feedback">Please enter Title</div>
+    </div>
+
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea required type="text" class="form-control" id="description" name="description" placeholder="Add Description"></textarea>
+
+      <div class="invalid-feedback">Please enter a Description</div>
+    </div>
+
+   
+    <div class="col-md-8 mb-2">
+      <label for="image" class="form-label">Upload Image </label>
+      <input type="file" class="form-control" name="listing[image]" >
+      required
+  </div>
+
+    
+
+    <div class="row">
+      <div class="mb-3 col-md-4 "> 
+          <label for="price" class="form-label">Price</label>
+          <input required type="number" class="form-control" name="listing[price]" placeholder="Enter price">
+          <div class="invalid-feedback">Price should be valid</div>
+         
+         
+        </div>
+
+        <div class="mb-3 col-md-8">
+          <label for="country" class="form-label">country</label>
+          <input required type="text" class="form-control" id="country" name="listing[country]" placeholder="India">
+         
+        
+          <div class="invalid-feedback">Please enter a country name</div>
+        </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="location" class="form-label">Location</label>
+      <input required type="text" class="form-control" id="location" name="listing[location]" placeholder="Jaipur/Rajasthan">
+
+      <div class="invalid-feedback">Country name should be valid</div>
+    </div>
+
+    <br />
+    <button class="btn btn-dark mb-3 px-4 text-center add-btn">Add</button>
+    <br />
+  </form>
+</div>
+</div>
+
