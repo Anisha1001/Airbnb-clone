@@ -16,7 +16,8 @@ const ExpressError = require("./utils/ExpressError.js");
 const {listingSchema, reviewSchema} = require("./schema.js");
 const Review = require("./models/review.js");
 const session=require("express-session")
-const MongoStore = require('connect-mongo').default;
+const MongoStore = require('connect-mongo');
+
 
 const flash=require("connect-flash");
 const passport=require("passport");
