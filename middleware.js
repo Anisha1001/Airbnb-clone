@@ -32,3 +32,22 @@ module.exports.isreviewAuthor=async(req,res,next)=>{
     }
     next();
 }
+module.exports.validateListing = async (req, res, next) => {
+  let result = listingValidation.validate(req.body);
+  if (result.error) {
+    throw new ExpressError(400, result.error);
+  } else {
+    next();
+  }
+};
+
+module.exports.validateReview = async(req,res,next)=>{
+    let result = reviewValidation.validate(req.body);
+    if (result.error){
+      throw new ExpressError(400,result.error);
+    }
+    else{
+      next();
+    }
+  }
+
